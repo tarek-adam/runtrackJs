@@ -1,0 +1,19 @@
+every thing you share in this life get less but knowledge get doubled
+
+Serve Your Files Using a Local Web Server:
+Instead of opening the HTML file directly from the file system, use a local web server to serve your files.
+You can use various tools to set up a local web server, such as Python's built-in HTTP server (python -m http.server), Node.js with packages like http-server, or other tools.
+For example, if you're using Python:
+Open a terminal or command prompt.
+Navigate to the directory where your index.html file is located.
+Run the following command to start a local server:
+shell
+Copy code
+python -m http.server
+Once the server is running, open your web browser and navigate to the URL http://localhost:8000 (or whatever port the server is using).
+This way, your files will be served over http:// instead of file://, resolving the CORS issue.
+Allow Access Control:
+In your case, since you're working on a local file, you can bypass the CORS issue by hosting the files using a local web server as described above.
+Check Relative Path:
+Ensure that the path in your JavaScript file is relative and correct. In the fetch request, the path should be 'expression.txt' if the expression.txt file is in the same directory as your HTML and JavaScript files.
+Since the error mentions file:///C:/Users/La%20Plateforme/Desktop/Marseille/runtrackJs/jour04/job01/expression.txt, the file path should be 'expression.txt' or './expression.txt'.

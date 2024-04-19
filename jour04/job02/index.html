@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Value Key</title>
+</head>
+<body>
+    <h1>JSON Value Key Example</h1>
+    <script>
+        function jsonValueKey(jsonString, key) {
+            // Parse the JSON string into a JavaScript object
+            const jsonObject = JSON.parse(jsonString);
+            
+            // Check if the key exists in the object and return the value
+            if (jsonObject.hasOwnProperty(key)) {
+                return jsonObject[key];
+            } else {
+                // Return null if the key does not exist in the object
+                return null;
+            }
+        }
+
+        // Example usage
+        const jsonString = '{"city": "Marseille", "country": "France"}';
+        const key = "city";
+        const value = jsonValueKey(jsonString, key);
+        console.log(`The value associated with the key "${key}" is: ${value}`);
+        // This will print: The value associated with the key "city" is: Marseille
+    </script>
+</body>
+</html>
