@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shuffle and Reorder Images</title>
+  <style>
+    /* Add some basic styling */
+    #rainbow-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .rainbow-img {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    #message {
+      text-align: center;
+      font-weight: bold;
+    }
+    .green {
+      color: green;
+    }
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<div id="rainbow-container">
+  <img class="rainbow-img" src="arc1.png" alt="Rainbow 1" id="img1">
+  <img class="rainbow-img" src="arc2.png" alt="Rainbow 2" id="img2">
+  <img class="rainbow-img" src="arc3.png" alt="Rainbow 3" id="img3">
+  <img class="rainbow-img" src="arc4.png" alt="Rainbow 4" id="img4">
+  <img class="rainbow-img" src="arc5.png" alt="Rainbow 5" id="img5">
+  <img class="rainbow-img" src="arc6.png" alt="Rainbow 6" id="img6">
+</div>
+
+<button id="shuffleButton">Shuffle</button>
+<button id="checkButton">Check Order</button>
+
+<p id="message"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
